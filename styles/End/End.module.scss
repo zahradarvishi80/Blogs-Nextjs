@@ -1,0 +1,102 @@
+.main{
+    width: 100%;
+    height: 300px;
+    justify-content: space-between;
+    align-items: flex-start;
+    display: flex;
+    // background-color: rgba(158, 158, 158, 0.068);
+    flex-direction: row;
+    box-shadow: 0 2px 2px rgb(223, 233, 232);
+    margin-top: 220px;
+
+}
+.main2{
+    width: 80%;
+    height: 100px;
+    // background-color: aquamarine;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+.p1{
+    color: rgb(0, 0, 0);
+    text-align: start;
+    font-size: 28px;
+    justify-content: flex-start;
+    font-family: monospace;
+    margin: 15px;
+}
+.Head2{
+    width: 30%;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;   
+    // background-color: aqua;
+    flex-direction: column;
+}
+.Head3{
+    width: 30%;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items:flex-end;   
+    // background-color: aqua;
+    flex-direction: column;
+    margin-right:15px;
+}
+.span{
+    font-family: monospace;
+    font-size: 17px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;   
+}
+.p{
+    font-family: monospace;
+    font-size: 15px;
+    margin: 10px;
+}
+.p2{
+    font-family: monospace;
+    font-size: 23px;
+    // margin: 10px;
+    padding: 5px;
+    font-weight: bold;
+
+}
+.span:hover{
+    color: #003cffd7;
+    font-size: 20px;
+    font-family: monospace;
+    // font-size: 17px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: 5px; 
+
+}
+.img{
+    width:80px;
+    height:80px;
+    display: flex;
+    margin-top: 20px;
+}
+.btn{
+    background-color: white;
+    flex-direction: row;
+    // border-radius: 20px;
+    display: flex;
+    // box-shadow: 0 2px 2px 0 #D100FF;
+    align-items: center;
+    width: 90px;
+    height:40px;
+    text-align: center;
+    border:none;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    // margin-right: 20px;
+    //px-6 py-1 flex items-center shadow-lg shadow-yellow-500/50"
+}

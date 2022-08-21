@@ -1,0 +1,133 @@
+.countainer {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  font-weight: bold;
+  z-index: -1px;
+  box-shadow: 0 1px 1px 0 rgba(253, 253, 253, 0.5), 0 1px 6px 0 rgba(233, 232, 232, 0.91);
+  flex-direction: row;
+}
+
+.Head1 {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+.Head2 {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Head3 {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: 10px;
+  flex-direction: row;
+}
+
+.p {
+  font-family: monospace;
+  font-size: 17px;
+  margin-right: 10px;
+}
+
+.p:hover {
+  color: rgba(0, 60, 255, 0.8431372549);
+}
+
+.btn1 {
+  width: 80px;
+  height: 30px;
+  display: flex;
+  background-color: #000000;
+  margin-right: 10px;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn2 {
+  width: 200px;
+  height: 45px;
+  display: flex;
+  background-color: #ffffff;
+  border: 3px solid #000000;
+  margin-right: 10px;
+  border-radius: 20px;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+
+.p2 {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 15px;
+  justify-content: center;
+  font-family: monospace;
+}
+
+.title {
+  display: flex;
+  font-size: 25px;
+  margin-right: -550px;
+}
+
+.item {
+  width: 40%;
+  height: 50px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+  gap: 9px;
+}
+
+.span {
+  font-family: monospace;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.span:hover {
+  color: rgba(0, 60, 255, 0.8431372549);
+  font-size: 27px;
+  font-family: monospace;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-weight: 5px;
+}
+
+.p1 {
+  font-family: monospace;
+  font-size: 27px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-weight: 5px;
+}
+
+.btn {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  border: none;
+  margin-left: 10px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}/*# sourceMappingURL=Header.module.css.map */
