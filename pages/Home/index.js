@@ -1,10 +1,13 @@
 import H from "../../styles/Home/Home.module.css"
+import Blog from "../component/AllBlogs"
+import TopBlog from "../component/TopBlog"
+import TopUser from "../component/TopUser"
 const Home=()=>{
     return(
         <div className={H.main}>
-               <p>Invest with your values.</p>
-               <p> Bloooginja is an createBlogs platform.</p>
-               <p> Build tomorrow’s world now.</p>
+            <TopBlog/> 
+            <Blog/>
+            <TopUser/>  
         </div>
     )
 }
