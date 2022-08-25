@@ -1,5 +1,5 @@
 
-import blog from "../../styles/AllBlog/AllBlog.module.css"
+import blog from "../../styles/blog/blog.module.css"
 import {useRouter} from "next/router";
 import Cookies from "universal-cookie";
 import { useEffect,useState } from "react";
@@ -25,19 +25,19 @@ const AllBlog=()=>{
     console.log(blogs);
 
     return(
-        <div className={blog.container}>
+        // <div className={blog.container}>
         <div className={blog.main}>
         
-        {/* {blogs.map((item,index)=>{
+        {blogs.map((item,index)=>{
             return(
                      <div className={blog.div}>
                         <img key={index} className={blog.img}  src={item.imgurl} />
-                        <div className={blog.div2}>
+                        {/* <div className={blog.div2}>
                            
                             <p className={blog.p}>
                             {item.title}
                             </p>
-                        </div>
+                        </div> */}
                     </div>
              
                 
@@ -45,11 +45,11 @@ const AllBlog=()=>{
 
         
             
-        })} */}
+        })}
               
 
         </div>
-        </div>
+        // </div>
     )
 }
 export default AllBlog

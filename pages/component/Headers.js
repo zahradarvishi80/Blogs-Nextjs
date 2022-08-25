@@ -4,14 +4,16 @@ import Link from "next/link";
 import Cookies from 'universal-cookie';
 import { useState ,useEffect} from "react";
 import {FaUserEdit} from "react-icons/fa";
-// import Blogs from "../Dashbord/Blogs"
+import {IoIosArrowDown} from "react-icons/io"
 import { useRouter } from "next/router";
+import {IoIosArrowUp} from "react-icons/io"
 const cookies =new Cookies()
 console.log("ppp");
 const Headers=()=>{
     const token=cookies.get("ut")
     const router =useRouter()
     const[me,setMe]=useState([])
+    const[click,setClick]=useState(0)
     useEffect(()=>{
         const token=cookies.get("ut")
         const check=async()=>{
@@ -55,13 +57,47 @@ const Headers=()=>{
          <div className={head.Head3}>
         {token?(
        <>
-       <button  className={head.btn2}>
+       {click==0?(
+         <button onClick={()=>setClick(1)} className={head.btn2}>
+          <IoIosArrowDown/>
        <FaUserEdit color="black" size={20} />
         <p className={head.p}>
           {me.name}{me.username}
         </p>
        
        </button>
+       ):(
+        <>
+           <button onClick={()=>setClick(0)} className={head.btn2}>
+            <IoIosArrowUp/>
+           <FaUserEdit color="black" size={20} />
+           <p className={head.p}>
+          {me.name}{me.username}
+        </p>
+       
+       </button>
+       <div className={head.modal}>
+        <img 
+        className={head.user}
+        onError={(e)=>{
+        e.target.src = "https://cdn-icons-png.flaticon.com/512/149/149071.png"
+           
+        }} 
+        src={me.avatar} />
+        <p className={head.h}>
+          {me.name}{me.username}
+        </p>
+        <div className={head.bdn}>
+          <button className={head.boton}>Home</button>
+          <button  className={head.boton}>My Blogs</button>
+          <button className={head.boton}>Create Blogs</button>
+          <button className={head.boton}>Log Out</button>
+        </div>
+       </div>
+        </>
+
+       )}
+      
        </>
          ):(
        <>
