@@ -7,8 +7,8 @@ align-items: center;
 
 }
 .img{
-    width:550px;
-    height:550px;
+    width:700px;
+    height:700px;
     justify-content: center;
     align-items: center;
 }
@@ -110,7 +110,7 @@ align-items: center;
     width: 45px;
     height: 45px;
     border-radius: 40px;
-    background-color: hwb(209 0% 0% / 0.13);
+    background-color: hwb(209 2% 74% / 0.164);
     position: absolute;
     // left: 10px;
     border: none;
@@ -152,4 +152,15 @@ align-items: center;
     display: flex;
     // background-color: aqua;
     margin-top: 10px;
+}
+.btn1{
+    width: 45px;
+    height: 45px;
+    border-radius: 40px;
+    background-color:  hwb(209 0% 77% / 0.3);
+    position: absolute;
+    // left: 10px;
+    border: none;
+    left: -20px;
+    top: 18px;
 }

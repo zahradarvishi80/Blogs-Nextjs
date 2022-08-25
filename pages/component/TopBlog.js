@@ -54,6 +54,7 @@ const TopBlog=()=>{
                             <p className={T.p1}  dangerouslySetInnerHTML={{__html:item.content.substring(0,450)}}>
 
                             </p>
+                          
                             </div>
                       
                         </>
@@ -62,7 +63,7 @@ const TopBlog=()=>{
                </div>
             ):(
                 <div className={T.div0}>
-                <button onClick={()=>setLog(0)} className={T.btn}><BsDashLg/></button>
+                <button onClick={()=>setLog(0)} className={T.btn1}><BsDashLg/></button>
                 {top.slice(0,1).map((item,index)=>{
                     return(
                         <>
@@ -128,7 +129,7 @@ const TopBlog=()=>{
         ):(
             <div className={T.div3}>
 
-            <button  className={T.btn} onClick={()=>setClick(0)}><BsDashLg/></button>
+            <button  className={T.btn1} onClick={()=>setClick(0)}><BsDashLg/></button>
             {top.slice(1,2).map((item,index)=>{
                     return(
                         <>
@@ -193,7 +194,7 @@ const TopBlog=()=>{
         ):(
             <div className={T.div4}>
 
-            <button  className={T.btn} onClick={()=>setPress(0)}><BsDashLg/></button>
+            <button  className={T.btn1} onClick={()=>setPress(0)}><BsDashLg/></button>
             {top.slice(2,3).map((item,index)=>{
                     return(
                         <>

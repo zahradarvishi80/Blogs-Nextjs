@@ -1,8 +1,9 @@
+
 import blog from "../../styles/AllBlog/AllBlog.module.css"
 import {useRouter} from "next/router";
 import Cookies from "universal-cookie";
 import { useEffect,useState } from "react";
-const Blog=()=>{
+const AllBlog=()=>{
     const router=useRouter()
     const [blogs,setBlogs]=useState([])
     const cookies = new Cookies();
@@ -23,14 +24,11 @@ const Blog=()=>{
     },[])
     console.log(blogs);
 
-
-
-    // <=
     return(
         <div className={blog.container}>
         <div className={blog.main}>
         
-        {blogs.slice(0,4).map((item,index)=>{
+        {/* {blogs.map((item,index)=>{
             return(
                      <div className={blog.div}>
                         <img key={index} className={blog.img}  src={item.imgurl} />
@@ -47,18 +45,11 @@ const Blog=()=>{
 
         
             
-        })}
+        })} */}
               
 
         </div>
-
-        <div className={blog.d}>
-                <button onClick={()=>router.push('/component/AllBlog')} className={blog.btn}> 
-               <p className={blog.p3}> see more </p>
-               </button>
-               </div>
         </div>
-       
     )
 }
-export default Blog
+export default AllBlog

@@ -2,7 +2,7 @@ import head from "../../styles/Header/Header.module.css";
 // import Profile from "./Profile";
 import Link from "next/link";
 import Cookies from 'universal-cookie';
-import { useState } from "react";
+import { useState ,useEffect} from "react";
 import {FaUserEdit} from "react-icons/fa";
 // import Blogs from "../Dashbord/Blogs"
 import { useRouter } from "next/router";
@@ -10,9 +10,27 @@ const cookies =new Cookies()
 console.log("ppp");
 const Headers=()=>{
     const token=cookies.get("ut")
-    const [isSelected,setIsSelected] =useState(false)
     const router =useRouter()
-
+    const[me,setMe]=useState([])
+    useEffect(()=>{
+        const token=cookies.get("ut")
+        const check=async()=>{
+            fetch('http://localhost:4000/user/me',{
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json",
+                    'auth':`ut ${token}`
+                },
+                body:JSON.stringify({})
+            })
+            .then((res)=>res.json())
+            .then((data)=>{
+                console.log("datapppp",data)
+                setMe(data)
+            })
+        }
+        check()
+    },[])
 
 
 
@@ -20,11 +38,11 @@ const Headers=()=>{
     return(
       <div  className={head.countainer}>
          <div className={head.Head1}>
-          <button className={head.btn}>
+          <button onClick={()=>router.push('/')} className={head.btn}>
           <p className={head.p}>Home</p></button>
           <button className={head.btn}>
           <p className={head.p}>Blogs </p></button>
-          <button className={head.btn}>
+          <button className={head.btn} onClick={()=>router.push('/component/TopBlog')} >
           <p className={head.p}> TopBlogs </p></button>
           <button className={head.btn}>
           <p className={head.p}> Users</p></button>
@@ -35,30 +53,30 @@ const Headers=()=>{
           </p>
          </div>
          <div className={head.Head3}>
-        {/* {token?(
+        {token?(
        <>
        <button  className={head.btn2}>
        <FaUserEdit color="black" size={20} />
         <p className={head.p}>
-          zahradarvishi
+          {me.name}{me.username}
         </p>
        
        </button>
        </>
          ):(
-       <> */}
-        <button className={head.btn}>
+       <>
+        <button onClick={()=>router.push('/SignIn')} className={head.btn}>
         <p className={head.p}> log in</p>
        </button>
 
-       <button className={head.btn1}>
+       <button  onClick={()=>router.push('/SignUp')} className={head.btn1}>
         <p className={head.p2}>Join</p>
        </button>
-       {/* </>
+       </>
        )
 
 
-        } */}
+        }
         
          </div>
       </div>
